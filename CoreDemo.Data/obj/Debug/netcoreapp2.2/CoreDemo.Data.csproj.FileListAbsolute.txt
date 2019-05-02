@@ -1,0 +1,10 @@
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\bin\Debug\netcoreapp2.2\CoreDemo.Data.deps.json
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\bin\Debug\netcoreapp2.2\CoreDemo.Data.runtimeconfig.json
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\bin\Debug\netcoreapp2.2\CoreDemo.Data.runtimeconfig.dev.json
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\bin\Debug\netcoreapp2.2\CoreDemo.Data.dll
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\bin\Debug\netcoreapp2.2\CoreDemo.Data.pdb
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\obj\Debug\netcoreapp2.2\CoreDemo.Data.csproj.CoreCompileInputs.cache
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\obj\Debug\netcoreapp2.2\CoreDemo.Data.AssemblyInfoInputs.cache
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\obj\Debug\netcoreapp2.2\CoreDemo.Data.AssemblyInfo.cs
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\obj\Debug\netcoreapp2.2\CoreDemo.Data.dll
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Data\obj\Debug\netcoreapp2.2\CoreDemo.Data.pdb

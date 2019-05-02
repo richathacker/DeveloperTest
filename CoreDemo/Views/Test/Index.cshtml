@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TestListModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Test List</h1>
+
+<p>
+    <a href="#" onclick="CreateNewTest()">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Test Date
+            </th>
+            <th>
+                No Of Participants
+            </th>
+            <th>
+               Test Type
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Date.ToString("MM/dd/yyyy")
+            </td>
+            <td>
+                @item.NoOfParticipants
+            </td>
+            <td>
+                @item.TestTypeName
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Index", "TestDetails", new {  id=item.TestId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div id="modal-createTest" class="modal fade" role="dialog" aria-labelledby="modal-createTestLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document" id="createTestpartial">
+
+    </div>
+</div>
+
+<script>
+    function CreateNewTest() {
+        var url = '@Url.Action("CreateNewTest", "Test")';
+
+        $('#createTestpartial').load(url, function () {
+            $('#modal-createTest').modal({ show: true });
+        });
+    }
+</script>

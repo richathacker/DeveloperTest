@@ -1,0 +1,96 @@
+﻿@model TestDetailModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>@Model.TestType</h4>
+                    @Html.HiddenFor(m=>m.TestId)
+                </div>
+                <div class="col-md-6">
+                    <h4>@Model.TestDate.ToString("MM/dd/yyyy")</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p class="text-right">
+                <a href="@Url.Action("Index","Test")" class="btn btn-primary">Back</a>
+                @Html.ActionLink("Delete Test", "DeleteTest", "Test", new { id = Model.TestId }, new { @class="btn btn-primary" , onclick = "return confirm('Do you want to delete this test ?');" })
+            </p>
+        </div>
+    </div>
+</div>
+
+<p>
+    <a href="#" onclick="CreateNewTestDetail()">Add New Athlete to Test</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                User Name
+            </th>
+            <th>
+                Distance
+            </th>
+            <th>
+                Fitness Rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.TestDetaillist)
+        {
+            <tr>
+                <td>
+                    <a href="#" onclick="editTestDetail(@item.Id)">@item.UserName</a>
+                </td>
+                <td>
+                    @item.Distance
+                </td>
+                <td>
+                    @item.Fitnessrating
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="modal-createTest" class="modal fade" role="dialog" aria-labelledby="modal-createTestLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document" id="createTestpartial">
+
+    </div>
+</div>
+
+<script>
+    function CreateNewTestDetail() {
+
+        var url = '@Url.Action("CreateNewTestDetail", "TestDetails")';
+        var model = {
+            'TestId': $("#TestId").val(),
+            'Id': 0
+        };
+
+        $('#createTestpartial').load(url, model, function () {
+            $('#modal-createTest').modal({ show: true });
+        });
+    }
+
+    function editTestDetail(id) {
+        var url = '@Url.Action("CreateNewTestDetail", "TestDetails")';
+        var model = {
+            'TestId': $("#TestId").val(),
+            'Id': id
+        };
+
+        $('#createTestpartial').load(url, model, function () {
+            $('#modal-createTest').modal({ show: true });
+        });
+    }
+</script>
+

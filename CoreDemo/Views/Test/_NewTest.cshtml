@@ -1,0 +1,58 @@
+﻿@model TestModel
+
+<div class="modal-content" style="width: 900px !important;">
+    <div class="modal-header has-border">
+        Create Test
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="ua-icon-modal-close">x</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="Testform" method="post" action="@Url.Action("SaveNewTest", "Test")">
+                    @Html.HiddenFor(m => m.TestId)
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.TypeId)
+                            </div>
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(m => m.TypeId, new SelectList(ViewBag.TestTypeName, "TypeId", "TestTypeName"), null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.TypeId)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.Date)
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(m => m.Date, "{0:MM/dd/yyyy}", new { @class = "form-control" , @format="" })
+                                @Html.ValidationMessageFor(m => m.Date)
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr/>
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary">Create Test</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    $(function () {
+        $('#Testform').validate();
+        $("#Date").datepicker();
+    });
+</script>
+

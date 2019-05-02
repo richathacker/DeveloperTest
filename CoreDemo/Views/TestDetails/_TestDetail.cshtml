@@ -1,0 +1,57 @@
+﻿@model TestDetailCustomModel
+
+<div class="modal-content" style="width: 900px !important;">
+    <div class="modal-header has-border">
+        Create Test Detail
+        <button type="button" class="close custom-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="ua-icon-modal-close">x</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="Testform" method="post" action="@Url.Action("SaveNewTestDetail", "TestDetails")">
+                    @Html.HiddenFor(m => m.Id)
+                    @Html.HiddenFor(m => m.TestId)
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.UserId)
+                            </div>
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(m => m.UserId, new SelectList(ViewBag.UserList, "UserId", "UserName"), null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.UserId)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.Distance)
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(m => m.Distance, null, new { @class = "form-control" , type ="number" })
+                                @Html.ValidationMessageFor(m => m.Distance)
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="form-group text-right">
+                        <button type="submit" class="btn btn-primary">Save Detail </button>
+                        @if (Model.Id > 0)
+                        {
+                            @Html.ActionLink("Delete", "DeleteTestDetail", "TestDetails", new { id = Model.Id , testId = Model.TestId }, new { @class = "btn btn-primary", onclick = "return confirm('Do you want to delete this athlate from the test detail?');" })
+                        }
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

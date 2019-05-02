@@ -1,0 +1,12 @@
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\bin\Debug\netcoreapp2.2\CoreDemo.Service.deps.json
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\bin\Debug\netcoreapp2.2\CoreDemo.Service.dll
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\bin\Debug\netcoreapp2.2\CoreDemo.Service.pdb
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\bin\Debug\netcoreapp2.2\CoreDemo.Data.dll
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\bin\Debug\netcoreapp2.2\CoreDemo.Data.pdb
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.csprojAssemblyReference.cache
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.csproj.CoreCompileInputs.cache
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.AssemblyInfoInputs.cache
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.AssemblyInfo.cs
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.csproj.CopyComplete
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.dll
+D:\Demo\AspNetCoreDemo\CoreDemo\CoreDemo.Service\obj\Debug\netcoreapp2.2\CoreDemo.Service.pdb
